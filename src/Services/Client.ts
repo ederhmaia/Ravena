@@ -1,1 +1,9 @@
-// 10058194-72ff-4dc9-a18e-535aa8b2dda3
+import axios from 'axios'
+
+// api key
+export default axios.create({
+  baseURL: 'https://api.coingecko.com/api/v3',
+  headers: {
+    'Content-type': 'application/json',
+  },
+})

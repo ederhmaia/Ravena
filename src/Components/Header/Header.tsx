@@ -1,24 +1,23 @@
 import { View, Image, Text, StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
+const Style = StyleSheet.create({
   Header: {
     backgroundColor: '#424242',
-    height: 230,
+    height: 180,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 50,
-    top: -50,
+    borderRadius: 0,
   },
   HeaderAvatar: {
     position: 'absolute',
-    top: -20,
+    top: -40,
     left: -170,
     width: 100,
     height: 100,
     borderRadius: 35,
-    resizeMode: 'contain',
   },
+
   AccountBalance: {
     position: 'absolute',
     fontFamily: 'Roboto',
@@ -36,21 +35,21 @@ const styles = StyleSheet.create({
     left: -30,
     color: 'rgb(255, 255, 255)',
   },
-
-  FirstRow: {},
 })
 
 export default function Header() {
   return (
-    <View style={styles.Header}>
-      <View style={styles.FirstRow}>
+    <View style={Style.Header}>
+      <View>
         <Image
-          style={styles.HeaderAvatar}
+          style={Style.HeaderAvatar}
           source={require('./icon.jpg')}
           width={20}
         />
-        <Text style={styles.AccountBalance}>R$ 490 373,22</Text>
-        <Text style={styles.BalanceDetails}>+15.35% </Text>
+        <View>
+          <Text style={Style.AccountBalance}>R$ 490 373,22</Text>
+          <Text style={Style.BalanceDetails}>+15.35% </Text>
+        </View>
       </View>
     </View>
   )

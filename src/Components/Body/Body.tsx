@@ -1,5 +1,11 @@
 import { View, StyleSheet } from 'react-native'
-import CryptoCard from './Components/Card'
+import CryptoCard from './Card/Card'
+
+const styles = StyleSheet.create({
+  Currency: {
+    marginTop: 10,
+  },
+})
 
 export default function Body() {
   return (
@@ -15,9 +21,3 @@ export default function Body() {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  Currency: {
-    marginTop: -30,
-  },
-})
